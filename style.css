@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 180px;
+}
+
+#searchInput {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    margin-left: 5px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#addButton {
+    background-color: #198754;
+}
+
+#clearCompleted {
+    background-color: #f0ad4e;
+}
+
+#clearAll {
+    background-color: #dc3545;
+}
+
+#taskCount {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    border-left: 4px solid #333;
+}
+
+.task-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.priority-high {
+    font-weight: bold;
+    border-left-color: #dc3545;
+}
+
+.priority-medium {
+    font-style: italic;
+    border-left-color: #f0ad4e;
+}
+
+.priority-low {
+    border-left-color: #198754;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.task-buttons button {
+    margin-left: 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    #taskInput,
+    select,
+    input[type="date"],
+    #addButton {
+        width: 100%;
+    }
+
+    .task-item {
+        align-items: flex-start;
+    }
+
+    .task-buttons {
+        width: 100%;
+    }
+
+    .task-buttons button {
+        flex: 1;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
